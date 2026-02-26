@@ -1,4 +1,4 @@
-package classes;
+package FactoriaAbstracta;
 
 public class MenuTemporada extends Menu {
 }
