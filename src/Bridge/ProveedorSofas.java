@@ -1,5 +1,7 @@
 package Bridge;
 
-public class ProveedorSofas {
-    
+import java.util.List;
+
+public interface ProveedorSofas extends Proveedor {
+    List<Producto> buscarPorPlazas(int plazas);
 }

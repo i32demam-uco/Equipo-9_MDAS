@@ -1,5 +1,7 @@
 package Bridge;
 
-public class ProveedorMesas {
-    
+import java.util.List;
+
+public interface ProveedorMesas extends Proveedor {
+    List<Producto> buscarPorDimensiones(String dimensiones);
 }

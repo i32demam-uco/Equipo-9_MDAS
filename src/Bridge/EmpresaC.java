@@ -2,7 +2,7 @@ package Bridge;
 
 import java.util.*;
 
-public class EmpresaC implements Proveedor {
+public class EmpresaC implements ProveedorMesas, ProveedorSofas {
 
     private List<Producto> productos;
 
@@ -15,6 +15,16 @@ public class EmpresaC implements Proveedor {
 
     @Override
     public List<Producto> getProductos() {
+        return productos;
+    }
+
+    @Override
+    public List<Producto> buscarPorDimensiones(String dimensiones) {
+        return productos;
+    }
+
+    @Override
+    public List<Producto> buscarPorPlazas(int plazas) {
         return productos;
     }
 }
