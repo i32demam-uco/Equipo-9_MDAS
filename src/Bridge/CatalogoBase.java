@@ -2,11 +2,11 @@ package Bridge;
 
 import java.util.*;
 
-public class SistemaEmpresa {
+public class CatalogoBase {
 
-    private List<Proveedor> proveedores;
+    protected List<Proveedor> proveedores;
 
-    public SistemaEmpresa() {
+    public CatalogoBase() {
         proveedores = new ArrayList<>();
     }
 
