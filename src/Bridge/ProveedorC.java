@@ -2,11 +2,11 @@ package Bridge;
 
 import java.util.*;
 
-public class EmpresaC implements ProveedorMesas, ProveedorSofas {
+public class ProveedorC implements ProveedorMesas, ProveedorSofas {
 
     private List<Producto> productos;
 
-    public EmpresaC() {
+    public ProveedorC() {
         productos = new ArrayList<>();
 
         productos.add(new Producto("Mesa1", 150, 2, "mesa"));

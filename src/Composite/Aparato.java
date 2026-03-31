@@ -12,7 +12,7 @@ public class Aparato implements Componente {
     }
 
     @Override
-    public double calcularGasto() {
+    public double calcularConsumo() {
         return consumoPorHora * horasUso;
     }
 

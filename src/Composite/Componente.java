@@ -1,6 +1,6 @@
 package Composite;
 
 public interface Componente {
-    double calcularGasto();
+    double calcularConsumo();
     String getNombre();
 }

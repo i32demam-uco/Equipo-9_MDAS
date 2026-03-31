@@ -10,7 +10,7 @@ public class CatalogoMesas extends CatalogoBase {
 
         System.out.println("Buscando mesas con dimensiones: " + dimensiones);
 
-        for (Proveedor p : proveedores) {
+        for (IUProveedor p : proveedores) {
             for (Producto prod : p.getProductos()) {
                 if (prod.getTipo().equalsIgnoreCase("mesa") && prod.getStock() > 0) {
                     resultados.add(prod);

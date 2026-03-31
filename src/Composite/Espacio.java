@@ -12,20 +12,20 @@ public class Espacio implements Componente {
         this.nombre = nombre;
     }
 
-    public void añadir(Componente componente) {
+    public void add(Componente componente) {
         hijos.add(componente);
     }
 
-    public void eliminar(Componente componente) {
+    public void remove(Componente componente) {
         hijos.remove(componente);
     }
 
     @Override
-    public double calcularGasto() {
+    public double calcularConsumo() {
         double total = 0;
         // Calcula el gasto acumulado de todos los elementos internos [cite: 23]
         for (Componente c : hijos) {
-            total += c.calcularGasto();
+            total += c.calcularConsumo();
         }
         return total;
     }

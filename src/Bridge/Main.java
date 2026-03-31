@@ -9,9 +9,9 @@ public class Main {
 
         CatalogoMesas sistema = new CatalogoMesas();
 
-        sistema.addProveedor(new EmpresaA());
-        sistema.addProveedor(new EmpresaB());
-        sistema.addProveedor(new EmpresaC());
+        sistema.addProveedor(new ProveedorA());
+        sistema.addProveedor(new ProveedorB());
+        sistema.addProveedor(new ProveedorC());
 
         System.out.println("=== ORDENADO POR PRECIO (TODOS) ===");
         for (Producto p : sistema.buscarOrdenadoPrecio()) {
@@ -24,8 +24,8 @@ public class Main {
         }
 
         CatalogoMesas sistemaMesas = new CatalogoMesas();
-        sistemaMesas.addProveedor(new EmpresaB());
-        sistemaMesas.addProveedor(new EmpresaC());
+        sistemaMesas.addProveedor(new ProveedorB());
+        sistemaMesas.addProveedor(new ProveedorC());
 
         System.out.println("\n=== MESAS (B + C) - Búsqueda Específica ===");
         for (Producto p : sistemaMesas.buscarPorDimensiones("200x90")) {
@@ -34,8 +34,8 @@ public class Main {
 
 
         CatalogoSofas sistemaSofas = new CatalogoSofas();
-        sistemaSofas.addProveedor(new EmpresaA());
-        sistemaSofas.addProveedor(new EmpresaC());
+        sistemaSofas.addProveedor(new ProveedorA());
+        sistemaSofas.addProveedor(new ProveedorC());
 
         System.out.println("\n=== SOFÁS (A + C) - Búsqueda Específica ===");
         for (Producto p : sistemaSofas.buscarPorPlazas(3)) {

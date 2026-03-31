@@ -4,13 +4,13 @@ import java.util.*;
 
 public class CatalogoBase {
 
-    protected List<Proveedor> proveedores;
+    protected List<IUProveedor> proveedores;
 
     public CatalogoBase() {
         proveedores = new ArrayList<>();
     }
 
-    public void addProveedor(Proveedor p) {
+    public void addProveedor(IUProveedor p) {
         proveedores.add(p);
     }
 
@@ -18,7 +18,7 @@ public class CatalogoBase {
     public List<Producto> buscarOrdenadoPrecio() {
         List<Producto> lista = new ArrayList<>();
 
-        for (Proveedor p : proveedores) {
+        for (IUProveedor p : proveedores) {
             lista.addAll(p.getProductos());
         }
 
@@ -34,7 +34,7 @@ public class CatalogoBase {
 
         Map<String, Producto> mapa = new HashMap<>();
 
-        for (Proveedor p : proveedores) {
+        for (IUProveedor p : proveedores) {
             for (Producto prod : p.getProductos()) {
 
                 if (prod.getStock() <= 0) continue;
@@ -58,7 +58,7 @@ public class CatalogoBase {
         public List<Producto> buscarPorTipo(String tipo) {
         List<Producto> lista = new ArrayList<>();
 
-        for (Proveedor p : proveedores) {
+        for (IUProveedor p : proveedores) {
             for (Producto prod : p.getProductos()) {
                 if (prod.getTipo().equalsIgnoreCase(tipo) && prod.getStock() > 0) {
                     lista.add(prod);
